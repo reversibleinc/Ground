@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "ReversibleCommon"
+  s.name         = "ReversibleEventBus"
   s.version      = "0.0.1"
   s.summary      = "Common files "
 
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                    Common files for modules
                    DESC
 
-  s.homepage     = "https://github.com/reversibleinc/ReversibleCommon"
+  s.homepage     = "https://github.com/reversibleinc/ReversibleEventTrack"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -67,7 +67,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "git@github.com:reversibleinc/ReversibleCommon.git", :tag => "#{s.version}" }
+  s.source       = { :git => "git@github.com:reversibleinc/ReversibleEventTrack.git", :tag => "#{s.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -77,50 +77,10 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-
-  s.subspec 'EventBus' do |ss|
-  ss.source_files  = "EventBus.swift"
-  ss.dependency 'ReversibleCommon/Common'
-  ss.dependency 'SwiftEventBus'
-  end
-
-  s.subspec 'EventTrack' do |ss|
-  ss.source_files  = "EventTrack/*.swift"
-  ss.dependency 'Mixpanel-swift'
-  ss.dependency 'ReversibleCommon/Common'
-  ss.dependency 'Mixpanel-swift'
-  end
-
-  s.subspec 'Common' do |ss|
-  ss.source_files  = "*.swift"
-  ss.dependency 'Mixpanel-swift'
-  ss.dependency 'ReversibleLoginModule/User'
-  end
-  # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  A list of resources included with the Pod. These are copied into the
-  #  target bundle with a build phase script. Anything else will be cleaned.
-  #  You can preserve files from being cleaned, please don't preserve
-  #  non-essential files like tests, examples and documentation.
-  #
-
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Link your library with frameworks, or libraries. Libraries do not include
-  #  the lib prefix of their name.
-  #
-
-  # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If your library depends on compiler flags you can set them in the xcconfig hash
-  #  where they will only apply to your library. If you depend on other Podspecs
-  #  you can include multiple dependencies to ensure it works.
-
+  s.source_files  = "*.swift"
+  s.dependency 'SwiftEventBus'
   s.swift_version = "5.0" 
-	  
-
-  # ――― Project Dependency  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  
+	    
 
 
 
