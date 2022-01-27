@@ -80,6 +80,10 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "ReversibleLoginModule/Sources/**/*.swift"
+  s.subspec 'User' do |user|
+  user.source_files = "ReversibleLoginModule/Sources/User/*.swift"
+  end
+
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -110,15 +114,15 @@ Pod::Spec.new do |s|
   # ――― Project Dependency  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.dependency 'SnapKit'
   s.dependency 'Kingfisher'
-  s.dependency 'Firebase/Auth','7.7.0'
-  s.dependency 'Firebase/Messaging', '7.7.0'
-  
-  s.dependency 'GoogleSignIn', '5.0.2'
-  s.dependency 'AttributedString', '1.6.8'
-  s.dependency 'DefaultsKit', '0.2.0'
   s.dependency 'HandyJSON'
+  s.dependency 'AttributedString'
+
+  s.dependency 'Firebase/Auth'
+  s.dependency 'Firebase/Messaging'
   
+  s.dependency 'GoogleSignIn'
   
+  s.dependency 'ReversibleBase'
   s.dependency 'ReversibleUIKit'
   s.dependency 'ReversibleFoundation'
   s.dependency 'WildAPIManager'
