@@ -77,7 +77,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Sources/*.swift"
+  s.source_files  = "*.swift"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -104,6 +104,10 @@ Pod::Spec.new do |s|
 
   # ――― Project Dependency  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.dependency 'SwiftEventBus'
+  s.dependency 'Mixpanel-swift'
+  s.dependency 'ReversibleLoginModule'
+
+
 
   
 end
