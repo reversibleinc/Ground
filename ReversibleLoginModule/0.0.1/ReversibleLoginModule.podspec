@@ -78,10 +78,28 @@ Pod::Spec.new do |s|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
+  s.default_subspec = 'Default' 
 
-  s.source_files  = "ReversibleLoginModule/Sources/**/*.swift"
-  s.subspec 'User' do |user|
-  user.source_files = "ReversibleLoginModule/Sources/User/*.swift"
+
+  s.subspec 'Default' do |default|
+  default.dependency 'ReversibleLoginModule/VC'
+  end
+  s.subspec 'VC' do |vc|
+  vc.source_files = "ReversibleLoginModule/Sources/VC/*.swift"
+  vc.dependency 'SnapKit'
+  vc.dependency 'ReversibleUser'
+  vc.dependency 'Kingfisher'
+  vc.dependency 'AttributedString'
+
+  vc.dependency 'Firebase/Auth'
+  vc.dependency 'Firebase/Messaging'
+  
+  vc.dependency 'GoogleSignIn'
+  
+  vc.dependency 'ReversibleBase'
+  vc.dependency 'ReversibleUIKit'
+  vc.dependency 'ReversibleFoundation'
+  vc.dependency 'WildAPIManager'
   end
 
 
@@ -99,32 +117,19 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.static_framework = true
+  # s.static_framework = true
   
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  If your library depends on compiler flags you can set them in the xcconfig hash
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
-  	s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  	s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 	s.swift_version = "5.0" 
-	  
+
 
   # ――― Project Dependency  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.dependency 'SnapKit'
-  s.dependency 'Kingfisher'
-  s.dependency 'HandyJSON'
-  s.dependency 'AttributedString'
 
-  s.dependency 'Firebase/Auth'
-  s.dependency 'Firebase/Messaging'
-  
-  s.dependency 'GoogleSignIn'
-  
-  s.dependency 'ReversibleBase'
-  s.dependency 'ReversibleUIKit'
-  s.dependency 'ReversibleFoundation'
-  s.dependency 'WildAPIManager'
   
 end
