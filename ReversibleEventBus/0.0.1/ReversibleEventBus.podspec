@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                    Common files for modules
                    DESC
 
-  s.homepage     = "https://github.com/reversibleinc/ReversibleEventTrack"
+  s.homepage     = "https://github.com/reversibleinc/eventBus"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -67,7 +67,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "git@github.com:reversibleinc/ReversibleEventTrack.git", :tag => "#{s.version}" }
+  s.source       = { :git => "git@github.com:reversibleinc/eventBus.git", :tag => "#{s.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #

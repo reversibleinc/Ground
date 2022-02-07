@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                    Common files for modules
                    DESC
 
-  s.homepage     = "https://github.com/reversibleinc/ReversibleEventTrack"
+  s.homepage     = "https://github.com/reversibleinc/AppUser"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -67,7 +67,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "git@github.com:reversibleinc/ReversibleUser.git", :tag => "#{s.version}" }
+  s.source       = { :git => "git@github.com:reversibleinc/AppUser.git", :tag => "#{s.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -79,6 +79,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = "*.swift"
   s.dependency 'HandyJSON'
+  s.dependency 'ReversibleEventBus'
   s.swift_version = "5.0" 
 	    
 
